@@ -2,7 +2,11 @@
 #define MAPDATA_H
 
 #include <QDialog>
-#include <QStandardItemModel>
+//#include <QStandardItemModel>
+#include <QSqlRelationalTableModel>
+#include <QSqlRelationalDelegate>
+#include <QSqlQuery>
+#include <QMessageBox>
 #include <QDataWidgetMapper>
 
 namespace Ui {
@@ -24,8 +28,10 @@ private:
     Ui::MapData *ui;
     void setupModel();
 
-    QStandardItemModel *model;
+    //QStandardItemModel *model;
+    QSqlRelationalTableModel *model;
     QDataWidgetMapper  *mapper;
+    int typeIndex;
 };
 
 #endif // MAPDATA_H
